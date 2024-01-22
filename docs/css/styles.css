@@ -1,5 +1,32 @@
 .header {
-    padding: 20px;
-    width: 100%;
-    display: inline-flex;
+    padding-left: 10em;
+    padding-right: 10em;
+    background-color: #2C5530;
+    max-width: none;
+    min-width: auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-content {
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+.logo {
+    color: #fff;
+    vertical-align: middle;
+    padding: 8px;
+    font-size: 20px;
+}
+.nav {
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+}
+.nav-item {
+    margin-right: 10px;
 }
