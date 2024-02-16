@@ -11,18 +11,31 @@ body {
 }
 
 header, nav, main, footer {
-    margin: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 /* Header styles */
 header {
-    text-align: center;
+    background-color: #f7f8fa;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    z-index: 1000;
 }
 
-/* Navigation styles */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
 nav ul {
     list-style-type: none;
-    text-align: center;
 }
 
 nav ul li {
@@ -36,21 +49,50 @@ nav ul li a {
 }
 
 /* Main section styles */
-main section {
-    margin-bottom: 40px;
+main {
+    margin-top: 60px; /* Adjust for fixed header */
 }
 
-main section h2 {
-    margin-bottom: 10px;
+.hero {
+    background-color: #f7f8fa;
+    padding: 20px;
 }
 
-main section ul {
-    list-style-type: square;
-    margin-left: 20px;
+.hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px; /* Add some space between text and image */
+}
+
+/* Container class for uniform spacing */
+.container {
+    max-width: calc(100% - 300px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 75px;
+    padding-right: 75px;
 }
 
 /* Footer styles */
 footer {
     text-align: center;
     margin-top: 50px;
+}
+
+/* Media query for tablets and smaller devices */
+@media screen and (max-width: 768px) {
+    .hero .container {
+        flex-direction: column; /* Display content in a column */
+        text-align: center; /* Center align the content */
+    }
+
+    .hero-image img {
+        margin-top: 20px; /* Add some space between text and image */
+    }
 }
